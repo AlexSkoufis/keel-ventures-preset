@@ -1,0 +1,135 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(48px, 8vw, 140px);
+}
+
+.sticky {
+  position: sticky;
+  top: calc(var(--header-h) + 40px);
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 28px;
+  max-width: 11ch;
+}
+
+.counter {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: clamp(40px, 7vh, 88px);
+  font-stretch: 120%;
+}
+
+.counterNum {
+  font-size: clamp(5rem, 11vw, 10rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  color: var(--white);
+}
+
+.counterTotal {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bars {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 6px;
+  margin-top: 24px;
+  max-width: 320px;
+}
+
+.bars span {
+  height: 3px;
+  background: var(--line-light);
+  overflow: hidden;
+}
+
+.bars i {
+  display: block;
+  height: 100%;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.list {
+  counter-reset: none;
+}
+
+.item {
+  min-height: 62vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 48px;
+  border-top: 1px solid var(--line-light);
+  transition: opacity 0.6s var(--ease);
+}
+
+.item:last-child {
+  border-bottom: 1px solid var(--line-light);
+}
+
+/* Only dimmed once JS is running and can light the active one */
+[data-approach]:global(.is-ready) .item {
+  opacity: 0.28;
+}
+
+[data-approach]:global(.is-ready) .item:global(.is-active) {
+  opacity: 1;
+}
+
+.itemNum {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--red);
+}
+
+.itemTitle {
+  margin-top: 12px;
+  font-size: clamp(2.25rem, 4.4vw, 4.25rem);
+  font-weight: 700;
+  font-stretch: 114%;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.itemText {
+  margin-top: 24px;
+  max-width: 30em;
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.74);
+}
+
+@media (max-width: 1023px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sticky {
+    position: static;
+  }
+
+  .counter,
+  .bars {
+    display: none;
+  }
+
+  .item {
+    min-height: 0;
+    padding-block: 36px;
+  }
+
+  [data-approach]:global(.is-ready) .item {
+    opacity: 1;
+  }
+}

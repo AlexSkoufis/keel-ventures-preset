@@ -1,0 +1,102 @@
+.section {
+  background: var(--navy-900);
+  overflow: hidden;
+}
+
+.slash {
+  position: absolute;
+  right: clamp(-160px, -5vw, -40px);
+  top: -12%;
+  width: clamp(220px, 24vw, 400px);
+  height: 64%;
+  background: var(--red);
+  clip-path: polygon(58% 0, 100% 0, 42% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(48px, 7vw, 120px);
+  align-items: start;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 28px;
+  max-width: 12ch;
+}
+
+.direct {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  margin-top: clamp(40px, 6vw, 72px);
+}
+
+.directLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-200);
+}
+
+.email {
+  font-size: clamp(1.375rem, 2.6vw, 2.25rem);
+  font-weight: 600;
+  font-stretch: 108%;
+  letter-spacing: -0.02em;
+  background: linear-gradient(var(--red), var(--red)) 0 100% / 100% 2px no-repeat;
+  padding-bottom: 4px;
+  transition: background-size 0.5s var(--ease);
+  overflow-wrap: anywhere;
+}
+
+.email:hover,
+.email:focus-visible {
+  background-size: 0 2px;
+  background-position: 100% 100%;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+.social:hover,
+.social:focus-visible {
+  color: var(--white);
+}
+
+.social svg {
+  width: 12px;
+  height: 12px;
+}
+
+.formWrap {
+  background: var(--paper);
+  color: var(--ink);
+  padding: clamp(24px, 3.4vw, 48px);
+}
+
+@media (max-width: 1023px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .slash {
+    top: auto;
+    bottom: -4%;
+    height: 30%;
+    width: 160px;
+    right: -50px;
+  }
+}

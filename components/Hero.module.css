@@ -1,0 +1,292 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--header-h) + clamp(32px, 6vh, 80px));
+  padding-bottom: clamp(48px, 7vh, 80px);
+  overflow: hidden;
+  background: var(--navy-900);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(153, 181, 231, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(153, 181, 231, 0.07) 1px, transparent 1px);
+  background-size: calc(100% / 12) 96px;
+  mask-image: radial-gradient(ellipse 80% 70% at 70% 30%, #000 20%, transparent 75%);
+}
+
+/* The red cut from the J in the logo, scaled up as the signature motif */
+.slashWrap {
+  position: absolute;
+  top: -8%;
+  right: clamp(-120px, -4vw, -20px);
+  width: clamp(260px, 38vw, 620px);
+  height: 92%;
+}
+
+.slash {
+  width: 100%;
+  height: 100%;
+  background: var(--red);
+  clip-path: polygon(58% 0, 100% 0, 42% 100%, 0 100%);
+  transform-origin: 50% 0;
+}
+
+.slashOutline {
+  position: absolute;
+  top: 18%;
+  right: clamp(80px, 22vw, 400px);
+  width: clamp(200px, 26vw, 420px);
+  height: 74%;
+  background: var(--blue);
+  opacity: 0.32;
+  clip-path: polygon(58% 0, 100% 0, 42% 100%, 0 100%);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  margin-top: clamp(20px, 3vh, 36px);
+  font-size: clamp(2.75rem, min(8vw, 13vh), 8.5rem);
+  font-weight: 700;
+  font-stretch: 116%;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+}
+
+.accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: -0.02em;
+  color: var(--blue-200);
+  padding-right: 0.1em;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  gap: clamp(32px, 6vw, 120px);
+  align-items: end;
+  margin-top: clamp(28px, 4.5vh, 56px);
+}
+
+.lead {
+  max-width: 36em;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 0;
+  margin-top: 32px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.pillars li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.pillars li + li::before {
+  content: "";
+  width: 8px;
+  height: 12px;
+  margin-inline: 18px;
+  background: var(--red);
+  clip-path: polygon(58% 0, 100% 0, 42% 100%, 0 100%);
+}
+
+/* Self-selection panel: the fastest route to the right conversation */
+.panel {
+  background: var(--navy-800);
+  border: 1px solid var(--line-light);
+  padding: 24px 24px 8px;
+}
+
+.panelTitle {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-200);
+  padding-bottom: 12px;
+}
+
+.panelLink {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 0;
+  border-top: 1px solid var(--line-light);
+  isolation: isolate;
+}
+
+.panelLink::before {
+  content: "";
+  position: absolute;
+  inset: 0 -24px;
+  z-index: -1;
+  background: var(--navy);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform 0.45s var(--ease);
+}
+
+.panelLink:hover::before,
+.panelLink:focus-visible::before {
+  transform: none;
+}
+
+.panelNum {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--red);
+  align-self: start;
+  padding-top: 4px;
+}
+
+.panelText {
+  display: grid;
+  gap: 2px;
+}
+
+.panelText strong {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-stretch: 108%;
+  letter-spacing: -0.01em;
+}
+
+.panelText span {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.panelArrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.45s var(--ease);
+}
+
+.panelLink:hover .panelArrow,
+.panelLink:focus-visible .panelArrow {
+  transform: translateX(4px) rotate(-45deg);
+  color: var(--red);
+}
+
+.scrollHint {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 22px;
+  display: none;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.scrollHint i {
+  position: relative;
+  width: 48px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.scrollHint i::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--white);
+  animation: hint 2.2s var(--ease) infinite;
+}
+
+@keyframes hint {
+  0% {
+    transform: translateX(-100%);
+  }
+  60%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 760px) {
+  .scrollHint {
+    display: flex;
+  }
+}
+
+@media (max-width: 1023px) {
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    max-width: 560px;
+  }
+
+  .slashWrap {
+    width: 40vw;
+    height: 46%;
+  }
+
+  .slashOutline {
+    right: 30vw;
+    height: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  .title {
+    letter-spacing: -0.04em;
+  }
+
+  .ctas :global(.btn) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .slashWrap {
+    top: -6%;
+    width: 46vw;
+    height: 26%;
+    right: -16vw;
+  }
+
+  .slashOutline {
+    display: none;
+  }
+}

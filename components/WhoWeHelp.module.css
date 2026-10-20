@@ -1,0 +1,214 @@
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 32px clamp(32px, 6vw, 96px);
+  align-items: end;
+  margin-bottom: clamp(48px, 6vw, 88px);
+}
+
+.title {
+  margin-top: 20px;
+  max-width: 12ch;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Card turns navy on hover; a cursor-following light adds depth */
+.card {
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 3vw, 40px);
+  min-height: 560px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 0.5s var(--ease);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--navy);
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.6s var(--ease);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(420px circle at var(--mx) var(--my), rgba(153, 181, 231, 0.22), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+@media (hover: hover) {
+  .card:hover,
+  .card:focus-within {
+    color: var(--white);
+  }
+
+  .card:hover::before,
+  .card:focus-within::before {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .card:hover::after {
+    opacity: 1;
+  }
+
+  .card:hover .text,
+  .card:focus-within .text,
+  .card:hover .points,
+  .card:focus-within .points {
+    color: rgba(255, 255, 255, 0.76);
+  }
+
+  .card:hover .service,
+  .card:focus-within .service {
+    color: var(--blue-200);
+  }
+
+  .card:hover .points li,
+  .card:focus-within .points li {
+    border-color: var(--line-light);
+  }
+
+  .card:hover .ctaIcon,
+  .card:focus-within .ctaIcon {
+    background: var(--red-600);
+    color: var(--white);
+    transform: rotate(-45deg);
+  }
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(40px, 6vw, 88px);
+}
+
+.service {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  transition: color 0.5s var(--ease);
+}
+
+.index {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--red);
+}
+
+.cardTitle {
+  font-size: clamp(1.75rem, 2.5vw, 2.375rem);
+  font-weight: 700;
+  font-stretch: 110%;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.text {
+  margin-top: 20px;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  transition: color 0.5s var(--ease);
+}
+
+.points {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: color 0.5s var(--ease);
+}
+
+.points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 10px;
+  border-top: 1px solid var(--line);
+  transition: border-color 0.5s var(--ease);
+}
+
+.points li::before {
+  content: "";
+  width: 7px;
+  height: 11px;
+  flex: none;
+  background: var(--red);
+  clip-path: polygon(58% 0, 100% 0, 42% 100%, 0 100%);
+}
+
+.cta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+/* Whole card is clickable via the CTA */
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.ctaIcon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  transition:
+    transform 0.5s var(--ease),
+    background-color 0.5s var(--ease);
+}
+
+.ctaIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1023px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 0;
+  }
+
+  .cardTop {
+    margin-bottom: 32px;
+  }
+}

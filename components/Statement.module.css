@@ -1,0 +1,37 @@
+.section {
+  background: var(--paper);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: clamp(32px, 4vw, 56px);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red-600);
+}
+
+.label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.text {
+  max-width: 22em;
+  font-size: clamp(1.875rem, 4.4vw, 4rem);
+  font-weight: 500;
+  font-stretch: 104%;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  text-wrap: pretty;
+}
+
+.word {
+  display: inline;
+}

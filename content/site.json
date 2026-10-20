@@ -1,0 +1,104 @@
+{
+  "name": "Keel Ventures",
+  "url": "https://keel.example",
+  "tagline": "Steady hands for what comes next.",
+  "seo": {
+    "title": "Keel Ventures | Legacy, Growth and Strategy Partners for Midwest Businesses",
+    "description": "Keel Ventures is a people-first investment firm. We help business owners across the Midwest plan ownership transitions, fund growth and sharpen strategy, while protecting their people and their name.",
+    "ogImageAlt": "Keel Ventures"
+  },
+  "logo": {
+    "alt": "Keel Ventures"
+  },
+  "skipLink": "Skip to content",
+  "nav": {
+    "label": "Main navigation",
+    "items": [
+      {
+        "label": "Who we help",
+        "href": "#who-we-help"
+      },
+      {
+        "label": "How we partner",
+        "href": "#approach"
+      },
+      {
+        "label": "Process",
+        "href": "#process"
+      },
+      {
+        "label": "Team",
+        "href": "#team"
+      }
+    ],
+    "cta": {
+      "label": "Start a conversation",
+      "href": "#contact"
+    },
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "mobileNote": "Tell us where your business is headed. We'll take it from there."
+  },
+  "contact": {
+    "email": "hello@keel.example",
+    "linkedin": {
+      "label": "LinkedIn",
+      "href": "#"
+    }
+  },
+  "footer": {
+    "statement": "A people-first firm partnering with businesses across the Midwest and beyond.",
+    "columns": [
+      {
+        "title": "Explore",
+        "links": [
+          {
+            "label": "Who we help",
+            "href": "#who-we-help"
+          },
+          {
+            "label": "How we partner",
+            "href": "#approach"
+          },
+          {
+            "label": "Process",
+            "href": "#process"
+          },
+          {
+            "label": "Values",
+            "href": "#values"
+          },
+          {
+            "label": "Team",
+            "href": "#team"
+          }
+        ]
+      },
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "Legacy Planning",
+            "href": "#who-we-help"
+          },
+          {
+            "label": "Growth Planning",
+            "href": "#who-we-help"
+          },
+          {
+            "label": "Business Strategy",
+            "href": "#who-we-help"
+          }
+        ]
+      }
+    ],
+    "contactTitle": "Get in touch",
+    "backToTop": "Back to top",
+    "copyright": "© {year} Keel Ventures. All rights reserved.",
+    "credit": {
+      "prefix": "Designed by",
+      "label": "CoreConcepts Design",
+      "href": "https://coreconcepts.design/"
+    }
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "hero": {
+    "eyebrow": "Steady hands for what comes next.",
+    "titleLines": [
+      "Your business",
+      "built a legacy."
+    ],
+    "titleAccent": "Let's make it last.",
+    "lead": "Keel Ventures is a people-first investment firm. We help owners across the Midwest transition ownership, fund growth and sharpen strategy, without losing the people and the reputation that got them here.",
+    "primaryCta": {
+      "label": "Start a conversation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "See how we partner",
+      "href": "#approach"
+    },
+    "pillars": [
+      "Trust",
+      "Growth",
+      "Experience"
+    ],
+    "panel": {
+      "title": "How can we help?",
+      "items": [
+        {
+          "label": "Legacy Planning",
+          "text": "Plan a transition that protects your team and your name.",
+          "topic": "legacy",
+          "href": "#contact"
+        },
+        {
+          "label": "Growth Planning",
+          "text": "Capital and hands-on experience for the next stage.",
+          "topic": "growth",
+          "href": "#contact"
+        },
+        {
+          "label": "Business Strategy",
+          "text": "An outside view on where to focus next.",
+          "topic": "strategy",
+          "href": "#contact"
+        }
+      ]
+    },
+    "scrollHint": "Scroll"
+  },
+  "marquee": [
+    "Trust",
+    "Growth",
+    "Experience",
+    "Integrity",
+    "People first",
+    "Legacy"
+  ],
+  "whoWeHelp": {
+    "eyebrow": "Who we help",
+    "title": "Where is your business right now?",
+    "intro": "Most owners come to us at one of three moments. Pick the one that sounds most like you.",
+    "cards": [
+      {
+        "service": "Legacy Planning",
+        "title": "I'm thinking about stepping back.",
+        "text": "You've spent years building something that matters. We help you plan a transition that protects your team, your customers and your name, whether that means bringing in a partner or handing the business to people who will carry it forward.",
+        "points": [
+          "Succession and ownership transition",
+          "Acquisition by a partner who stays invested",
+          "A plan that keeps your culture intact"
+        ],
+        "cta": "Plan my transition",
+        "topic": "legacy"
+      },
+      {
+        "service": "Growth Planning",
+        "title": "We're ready for the next stage.",
+        "text": "Growth takes capital, structure and people who have scaled businesses before. We invest alongside you and bring financial, operational and go-to-market experience to the table.",
+        "points": [
+          "Strategic investment",
+          "Operations and finance support",
+          "Sales and go-to-market leadership"
+        ],
+        "cta": "Talk about growth",
+        "topic": "growth"
+      },
+      {
+        "service": "Business Strategy",
+        "title": "I need a clearer plan.",
+        "text": "Sometimes the next move isn't obvious. We bring an outside perspective, look closely at the data and the people, and help you decide where to focus and what to do first.",
+        "points": [
+          "Honest, outside perspective",
+          "Data-informed decisions",
+          "Clear priorities and next steps"
+        ],
+        "cta": "Get a second opinion",
+        "topic": "strategy"
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": "How we partner",
+    "title": "Three ways we work with a business.",
+    "intro": "We work with large and small businesses in the Midwest and beyond. Every partnership starts with the people, then the numbers.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Strategic investment",
+        "text": "Capital for companies with a clear path forward, paired with hands-on support from people who have led finance, operations and sales teams."
+      },
+      {
+        "number": "02",
+        "title": "Key partnerships",
+        "text": "We connect businesses with the expertise and relationships they need to grow, and we stay involved to make those partnerships work."
+      },
+      {
+        "number": "03",
+        "title": "Acquisition",
+        "text": "For owners ready to hand over the keys, we acquire companies looking for a sustainable legacy transition, one that keeps the team and the community at the center."
+      }
+    ]
+  },
+  "statement": {
+    "label": "Trust. Growth. Experience.",
+    "text": "We believe business can make a real difference in the world. That means building on the strengths of people, leading with integrity and authenticity, and leaving an unshakeable legacy for the teams and communities a business serves."
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "What working with us looks like.",
+    "intro": "Clear steps, candid conversations and no surprises along the way.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "A first conversation",
+        "text": "Tell us where the business is today and where you want it to go. We listen first and ask a lot of questions."
+      },
+      {
+        "number": "02",
+        "title": "Understand the business",
+        "text": "We look at the numbers, the market and, just as closely, the people who make the business run."
+      },
+      {
+        "number": "03",
+        "title": "Define the win-win",
+        "text": "Together we shape a structure that works for you, your team and us. A good deal should feel right to everyone at the table."
+      },
+      {
+        "number": "04",
+        "title": "Transition and grow",
+        "text": "We stay involved through the transition and beyond, with support across finance, operations, people and growth."
+      }
+    ]
+  },
+  "values": {
+    "eyebrow": "Values",
+    "title": "How we show up.",
+    "items": [
+      {
+        "title": "Authentic",
+        "text": "We're candid and we care. We show up as real people with real opinions, and when something needs discussing, we engage fully."
+      },
+      {
+        "title": "Results driven",
+        "text": "We want to win, and we want everyone involved to win too. The more we win together, the more lasting the impact."
+      },
+      {
+        "title": "IQ and EQ",
+        "text": "We follow the data where objectivity matters. Just as important, we bring the emotional intelligence it takes to find win-win outcomes."
+      },
+      {
+        "title": "Integrity",
+        "text": "We take the high road. Winning the right way always feels better in the end, and every party involved should know that."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "People who have built, run and grown businesses.",
+    "intro": "Our team brings backgrounds in finance, operations, sales and entrepreneurship across a wide range of industries. We back businesses ready for their next stage.",
+    "members": [
+      {
+        "name": "Daniel Okafor",
+        "credentials": "MBA",
+        "role": "Founder and Managing Partner",
+        "bio": "Twenty years leading companies from start-up to mid-market. Daniel cares about people and performance in equal measure, from strategy and vision through to execution."
+      },
+      {
+        "name": "Maren Holt",
+        "credentials": "CPA",
+        "role": "Partner, Finance",
+        "bio": "A long corporate career in accounting and financial leadership. Maren is the go-to expert for operational finance, deal structure and reporting that owners can actually use."
+      },
+      {
+        "name": "Priya Raman",
+        "credentials": "",
+        "role": "Vice President, People",
+        "bio": "A people leader with deep recruiting and leadership-development experience. Priya makes sure the people in our people-first approach are more than a slogan."
+      },
+      {
+        "name": "Tomas Lindqvist",
+        "credentials": "MBA",
+        "role": "Operations and Engineering",
+        "bio": "Leads operations strategy and engineering. Tomas brings a broad technical background to businesses getting ready to tighten up or scale."
+      },
+      {
+        "name": "Grace Whitfield",
+        "credentials": "MBA",
+        "role": "Vice President, Growth",
+        "bio": "Sales leadership across industrial equipment, healthcare and consumer goods. Grace brings pricing and go-to-market discipline to every part of a business."
+      },
+      {
+        "name": "Walter Brandt",
+        "credentials": "",
+        "role": "Advisor",
+        "bio": "Deep roots in the region and a long record of successful ventures. Walter offers practical, plain-spoken strategic advice on every transaction."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Start a conversation",
+    "title": "Let's talk about what's next for your business.",
+    "intro": "Interested in how we might partner with your business? We'd love to hear from you. Share a little about where you are and we'll be in touch.",
+    "directLabel": "Prefer email?",
+    "form": {
+      "topicLabel": "What would you like to talk about?",
+      "topics": [
+        {
+          "value": "legacy",
+          "label": "Legacy Planning"
+        },
+        {
+          "value": "growth",
+          "label": "Growth Planning"
+        },
+        {
+          "value": "strategy",
+          "label": "Business Strategy"
+        },
+        {
+          "value": "other",
+          "label": "Something else"
+        }
+      ],
+      "fields": {
+        "name": {
+          "label": "Your name",
+          "placeholder": "Jane Smith"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "jane@company.com"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Company name"
+        },
+        "message": {
+          "label": "Where is the business today?",
+          "placeholder": "A few sentences is plenty."
+        }
+      },
+      "submit": "Send message",
+      "note": "Sending opens your email app with your message ready to go.",
+      "success": "Your email app should now be open with your message. If it didn't open, email us directly at",
+      "errors": {
+        "name": "Please add your name.",
+        "email": "Please add a valid email address.",
+        "message": "Please tell us a little about your business."
+      },
+      "subjectPrefix": "Website enquiry"
+    }
+  }
+}

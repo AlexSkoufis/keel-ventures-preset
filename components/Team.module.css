@@ -1,0 +1,143 @@
+.section {
+  background: var(--paper);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 32px clamp(32px, 6vw, 96px);
+  align-items: end;
+  margin-bottom: clamp(48px, 6vw, 88px);
+}
+
+.title {
+  margin-top: 20px;
+  max-width: 14ch;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(40px, 4vw, 64px) clamp(16px, 2vw, 28px);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 5 / 6;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--navy);
+}
+
+/* Monogram tile in place of a portrait: swap for real photos when the firm has them */
+.monogram {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  font-size: clamp(88px, 10vw, 150px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  background:
+    radial-gradient(120% 90% at 85% 0%, var(--navy-600), transparent 60%),
+    var(--navy);
+  transform: scale(1);
+  transition: transform 1s var(--ease), color 0.7s var(--ease);
+}
+
+/* Brand tint over the greyscale photo */
+.media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--navy);
+  mix-blend-mode: color;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s var(--ease);
+}
+
+.media::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 64px;
+  background: var(--red);
+  clip-path: polygon(58% 0, 100% 0, 42% 100%, 0 100%);
+  z-index: 2;
+  transform: translate(-100%, 100%);
+  transition: transform 0.6s var(--ease);
+}
+
+@media (hover: hover) {
+  .card:hover .monogram {
+    color: var(--white);
+    transform: scale(1.04);
+  }
+
+  .card:hover .media::before {
+    opacity: 0;
+  }
+
+  .card:hover .media::after {
+    transform: translate(16px, -16px);
+  }
+}
+
+.body {
+  padding-top: 22px;
+}
+
+.name {
+  font-size: clamp(1.375rem, 1.8vw, 1.75rem);
+  font-weight: 700;
+  font-stretch: 110%;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--navy);
+}
+
+.cred {
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.role {
+  margin-top: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.bio {
+  margin-top: 14px;
+  font-size: 0.9875rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 1023px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    aspect-ratio: 4 / 4;
+  }
+}

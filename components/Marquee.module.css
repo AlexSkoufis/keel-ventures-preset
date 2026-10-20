@@ -1,0 +1,47 @@
+.marquee {
+  overflow: hidden;
+  padding-block: clamp(28px, 4vw, 48px);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+
+.row li {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(2.5rem, 7vw, 6.5rem);
+  font-weight: 700;
+  font-stretch: 120%;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.row li:nth-child(even) {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: -0.02em;
+  color: var(--blue);
+}
+
+.row li::after {
+  content: "";
+  width: 0.32em;
+  height: 0.62em;
+  margin-inline: 0.42em;
+  background: var(--red);
+  clip-path: polygon(58% 0, 100% 0, 42% 100%, 0 100%);
+}
